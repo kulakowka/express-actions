@@ -1,19 +1,24 @@
+# Simple application 
+
+- Expressjs
+- Babeljs
+- Mongojs
 
 Run development server: `npm start`
 
 Run production server: `NODE_ENV=production MONGO_URL=mongodb://localhost/test PORT=8080 npm start`
 
-Получить список записей:
+Get list items:
 `GET /:collection`
 
-Создать новую запись:
+Create new item:
 `POST /:collection`
 
-Получить одну запись:
+Get one item:
 `GET /:collection/:id`
 
-Изменить одну запись:
+Update one item:
 `PUT /:collection/:id`
 
-Удалить одну запись:
+Delete one item:
 `DELETE /:collection/:id`
