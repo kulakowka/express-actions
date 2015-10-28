@@ -1,24 +1,17 @@
 import express      from 'express';
 import bodyParser   from 'body-parser';
-import routes       from './routes';
-import mongoose     from './db';
 import path         from 'path';
-import session      from 'express-session';
-import connectMongo from 'connect-mongo';
+import utils        from './utils';
+import routes       from './routes';
 
-var MongoStore  = connectMongo(session);
-var store       = new MongoStore({ mongooseConnection: mongoose.connection });
-var app         = express();
+var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(session({
-  saveUninitialized: false,
-  resave: false,
-  store: store,
-  secret: 'secret key string',
-}));
+app.use(utils.session);
+app.use(utils.stylus);
+app.use(utils.staticFiles);
 
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'jade');
