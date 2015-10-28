@@ -1,13 +1,17 @@
-import express from 'express'
-import bodyParser from 'body-parser'
-import router from './router'
+import express    from 'express';
+import bodyParser from 'body-parser';
+import routes     from './routes';
+import path       from 'path';
 
 var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(router);
+app.set('views', path.resolve(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(routes);
 
 app.listen(process.env.PORT || 3000);
 

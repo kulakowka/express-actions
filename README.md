@@ -1,5 +1,30 @@
 # Simple application 
 
+
+## Actions
+
+В папке `app/actions/` лежат так называемые "действия". 
+Каждое действие что-то делает, при выборе название нужно ответить на вопрос "Что сделать?" => `createArticle` (создать статью)
+
+Вот несколько примеров названий действий: `addUser`, `createArticle` и тд.
+Это обычные функции, которые модифицируют объект `req` или `res` 
+и отправляют запрос дальше с помощью вызова функции `next()`. 
+
+```javascript
+// app/actions/user/checkAuth.js
+export default (req, res, next) => {
+  if (!req.session.user) return next(new Error('Not authorised'));
+  next();
+};
+```
+
+На каждый маршрут применяется определенный набор действий.
+
+
+
+
+
+
 #### Used packages:
 - [Expressjs](http://expressjs.com)
 - [Babeljs](https://babeljs.io)

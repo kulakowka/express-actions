@@ -1,0 +1,9 @@
+extends ../layout.jade
+
+block title
+  title= title
+
+block content
+  each article in articles
+    h2
+      a(href="/articles/"+article.id)= article.title

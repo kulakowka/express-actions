@@ -13,6 +13,7 @@
     "babel": "^5.8.29",
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "mongojs": "^1.4.1"
+    "jade": "^1.11.0",
+    "mongoose": "^4.2.3"
   }
 }
