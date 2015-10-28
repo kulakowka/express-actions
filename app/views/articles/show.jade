@@ -4,5 +4,8 @@ block title
   title= title
 
 block content
-  h1= title
-  = text
+  article
+    h1= title
+    = text
+    .meta
+      a(href="/articles/"+id+"/edit") edit

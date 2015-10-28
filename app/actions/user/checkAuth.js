@@ -1,5 +1,7 @@
-// Проверяет, пришел ли запрос от авторизованного пользователя
 export default (req, res, next) => {
-  if (req.query.error) return next(new Error('Not authorised'));
+  req.session.user = 'kulakowka'; // hack
+
+  if (!req.session.user) return next(new Error('Not authorised'));
+
   next();
 };

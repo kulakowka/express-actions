@@ -1,8 +1,5 @@
 import Article from '../../models/article';
 
-/**
- * Ищет статью по req.params.id и прикрепляет ее к запросу
- */
 export default (req, res, next) => {
 
   Article

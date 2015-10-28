@@ -4,6 +4,14 @@ block title
   title= title
 
 block content
+  
   each article in articles
-    h2
-      a(href="/articles/"+article.id)= article.title
+    article
+      h2
+        a(href="/articles/"+article.id)= article.title
+      = article.text
+      .meta
+        a(href="/articles/"+article.id+"/edit") edit
+
+  unless articles.length
+    h1 No articles

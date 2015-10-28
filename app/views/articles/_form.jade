@@ -1,7 +1,8 @@
-form(action='/articles' method='post')
+form(action=(id ? '/articles/' + id : '/articles') method='post')
+  input(type="hidden" value=id)
   .field
-    input(name='title' placeholder='Title')
+    input(name='title' placeholder='Title' value=title)
   .field
-    textarea(name='text' placeholder='Text')
+    textarea(name='text' placeholder='Text')= text
   .field
     button(type='submit') submit
