@@ -28,46 +28,43 @@ NODE_ENV=production MONGO_URL=mongodb://localhost/test PORT=8080 npm start
 
 Any route may have one or more "Actions".
 
-For example look at this: [app/routes/article/index.js](app/routes/article/index.js)
+For example look at this: [app/routes/items/index.js](app/routes/items/index.js)
 
 ```javascript
-// POST /articles
-router.post('/', checkAuth, addUser, createArticle, redirectToArticle);
+// POST /items
+router.post('/', checkAuth, addUser, createItem, redirectToItem)
 
-// GET /articles
-router.get('/', findArticles, renderArticles);
+// GET /items
+router.get('/', findItems, renderItems)
 ```
 
-In this example `checkAuth`, `addUser`, `createArticle`, `redirectToArticle`, `findArticles`, `renderArticles` is "Actions".
+In this example `checkAuth`, `addUser`, `createItem`, `redirectToItem`, `findItems`, `renderItems` is "Actions".
 
 **Action** - is a simple function like this:
 
 ```javascript
-function(req, res, next) {
+function (req, res, next) {
 
-};
+}
 ```
 
 **Main rule:** One action === one function. You should avoid writing functions that perform multiple actions.
 
-For example, look at this: [app/actions/article/createArticle.js](app/actions/article/createArticle.js)
+For example, look at this: [app/actions/item/createItem.js](app/actions/item/createItem.js)
 
 ```javascript
-
-import Article from '../../models/article';
+import Item from '../../models/item'
 
 export default (req, res, next) => {
 
-  var article = new Article(req.body);
+  var item = new Item(req.body)
 
-  article.save((error, article) => {
-    if (error) return next(error);
-    req.article = article;
-    next();
-  });
-
-};
-
+  item.save((error, item) => {
+    if (error) return next(error)
+    req.item = item
+    next()
+  })
+}
 ```
 
 "Action" may modify `req` or `res` object and passes control to the next action by calling `next()`. 
