@@ -12,6 +12,8 @@ npm install
 npm start
 ```
 
+Open http://localhost:3000/ in your browser.
+
 #### Start production server: 
 ```
 NODE_ENV=production MONGO_URL=mongodb://localhost/test PORT=8080 npm start
