@@ -1,10 +1,9 @@
 import session      from 'express-session';
 import connectMongo from 'connect-mongo';
-import mongoose     from '../db';
+import {connection} from '../db';
 
 var MongoStore  = connectMongo(session);
-var store       = new MongoStore({ mongooseConnection: mongoose.connection });
-
+var store       = new MongoStore({ mongooseConnection: connection });
 
 export default session({
   saveUninitialized: false,

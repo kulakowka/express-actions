@@ -1,6 +1,6 @@
-import mongoose from '../db';
+import {Schema, model} from '../db';
 
-var schema = mongoose.Schema({
+var articleSchema = Schema({
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
   title: String,
@@ -8,6 +8,4 @@ var schema = mongoose.Schema({
   user: String,
 });
 
-var Model = mongoose.model('Article', schema);
-
-export default Model;
+export default model('Article', articleSchema);

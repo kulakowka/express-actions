@@ -1,19 +1,19 @@
-import express      from 'express';
-import bodyParser   from 'body-parser';
-import path         from 'path';
-import utils        from './utils';
-import routes       from './routes';
+import express                        from 'express';
+import {urlencoded, json}             from 'body-parser';
+import {resolve}                      from 'path';
+import {session, stylus, staticFiles} from './utils';
+import routes                         from './routes';
 
 var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(urlencoded({ extended: false }));
+app.use(json());
 
-app.use(utils.session);
-app.use(utils.stylus);
-app.use(utils.staticFiles);
+app.use(session);
+app.use(stylus);
+app.use(staticFiles);
 
-app.set('views', path.resolve(__dirname, 'views'));
+app.set('views', resolve(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(routes);

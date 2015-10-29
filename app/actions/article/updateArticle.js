@@ -4,7 +4,7 @@ export default (req, res, next) => {
 
   var article = req.article;
 
-  // TODO: hack!!!
+  // TODO: hack for example
   article.title = req.body.title;
   article.text = req.body.text;
 

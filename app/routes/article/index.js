@@ -1,5 +1,4 @@
-import express           from 'express';
-
+import {Router}          from 'express';
 import checkAuthor       from '../../actions/article/checkAuthor';
 import createArticle     from '../../actions/article/createArticle';
 import findArticle       from '../../actions/article/findArticle';
@@ -10,11 +9,10 @@ import renderArticleEdit from '../../actions/article/renderArticleEdit';
 import renderArticleNew  from '../../actions/article/renderArticleNew';
 import renderArticles    from '../../actions/article/renderArticles';
 import updateArticle     from '../../actions/article/updateArticle';
-
 import addUser           from '../../actions/user/addUser';
 import checkAuth         from '../../actions/user/checkAuth';
 
-var router = express.Router();
+var router = Router();
 
 // POST /articles
 router.post('/', checkAuth, addUser, createArticle, redirectToArticle);

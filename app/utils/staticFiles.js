@@ -1,4 +1,4 @@
-import express      from 'express';
-import path         from 'path';
+import {static}   from 'express';
+import {resolve} from 'path';
 
-export default express.static(path.resolve(__dirname, '../../', 'public'));
+export default static(resolve(__dirname, '../../', 'public'));
