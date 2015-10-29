@@ -71,7 +71,9 @@ export default (req, res, next) => {
 
 If action failed you must call `next(new Error('Reason'))`.
 
-The advantages of this approach are obvious. Since "Action" - it's a simple function (One action === one function), that allows:
+#### The advantages of this approach are obvious. 
+
+Since "Action" - it's a simple function (One action === one function), that allows:
 - It is very easy to test
 - It is very easy to transfer between different projects
 
