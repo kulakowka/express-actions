@@ -8,6 +8,7 @@ var itemSchema = mongoose.Schema({
   user: String
 })
 
+// Look at this http://stackoverflow.com/a/17960532/1018328
 var model = mongoose.model.bind(mongoose)
 
 export default model('Item', itemSchema)
