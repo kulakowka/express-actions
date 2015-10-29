@@ -2,8 +2,8 @@
 
 #### Setup project:
 ```
-git clone git@github.com:kulakowka/express-api.git
-cd express-api
+git clone git@github.com:kulakowka/express-actions.git
+cd express-actions
 npm install
 ```
 
