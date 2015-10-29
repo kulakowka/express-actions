@@ -76,7 +76,7 @@ If action failed you must call `next(new Error('Reason'))`.
 Since "Action" - it's a simple function (One action === one function), that allows:
 - It is very easy to test
 - It is very easy to transfer between different projects
-
+- It is very easy to understand
 
 
 
