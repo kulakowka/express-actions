@@ -1,12 +1,12 @@
-import {Router}       from 'express';
-import renderHomepage from '../actions/homepage/renderHomepage';
-import renderError    from '../actions/error/renderError';
-import articleRoutes  from './article';
+import {Router} from 'express'
+import renderHomepage from '../actions/homepage/renderHomepage'
+import renderError from '../actions/error/renderError'
+import articleRoutes from './article'
 
-var router = Router();
+var router = Router()
 
-router.get('/', renderHomepage);
-router.use('/articles', articleRoutes);
-router.use(renderError);
+router.get('/', renderHomepage)
+router.use('/articles', articleRoutes)
+router.use(renderError)
 
-export default router;
+export default router

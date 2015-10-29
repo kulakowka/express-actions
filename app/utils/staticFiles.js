@@ -1,4 +1,4 @@
-import {static}   from 'express';
-import {resolve} from 'path';
+import {static as serveStatic} from 'express'
+import {resolve} from 'path'
 
-export default static(resolve(__dirname, '../../', 'public'));
+export default serveStatic(resolve(__dirname, '../../', 'public'))

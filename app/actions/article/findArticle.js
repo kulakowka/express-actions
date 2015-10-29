@@ -1,13 +1,11 @@
-import Article from '../../models/article';
+import Article from '../../models/article'
 
 export default (req, res, next) => {
-
   Article
     .findById(req.params.id)
-    .exec((error, article) => {
-      if (error) return next(error);
-      req.article = article;
-      next();
-    });
-
-};
+    .exec((err, article) => {
+      if (err) return next(err)
+      req.article = article
+      next()
+    })
+}
