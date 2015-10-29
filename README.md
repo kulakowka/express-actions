@@ -1,4 +1,4 @@
-# Simple application 
+# About express-actions 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kulakowka/express-actions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
