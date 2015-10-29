@@ -1,16 +1,22 @@
 import {Router} from 'express'
-import checkAuthor from '../../actions/item/checkAuthor'
-import createItem from '../../actions/item/createItem'
-import findItem from '../../actions/item/findItem'
-import findItems from '../../actions/item/findItems'
-import redirectToItem from '../../actions/item/redirectToItem'
-import renderItem from '../../actions/item/renderItem'
-import renderItemEdit from '../../actions/item/renderItemEdit'
-import renderItemNew from '../../actions/item/renderItemNew'
-import renderItems from '../../actions/item/renderItems'
-import updateItem from '../../actions/item/updateItem'
-import addUser from '../../actions/user/addUser'
-import checkAuth from '../../actions/user/checkAuth'
+
+import {
+  checkAuthor,
+  createItem,
+  findItem,
+  findItems,
+  redirectToItem,
+  renderItem,
+  renderItemEdit,
+  renderItemNew,
+  renderItems,
+  updateItem
+} from '../../actions/item'
+
+import {
+  addUser,
+  checkAuth
+} from '../../actions/user'
 
 var router = Router()
 
