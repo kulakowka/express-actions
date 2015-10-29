@@ -19,7 +19,7 @@ NODE_ENV=production MONGO_URL=mongodb://localhost/test PORT=8080 npm start
 
 ## Concept description
 
-Any route may have one or more actions.
+Any route may have one or more "Actions".
 
 For example look at this: [app/routes/article/index.js](app/routes/article/index.js)
 
@@ -31,7 +31,7 @@ router.post('/', checkAuth, addUser, createArticle, redirectToArticle);
 router.get('/', findArticles, renderArticles);
 ```
 
-In this example `checkAuth`, `addUser`, `createArticle`, `redirectToArticle`, `findArticles`, `renderArticles` is a Actions.
+In this example `checkAuth`, `addUser`, `createArticle`, `redirectToArticle`, `findArticles`, `renderArticles` is "Actions".
 
 **Action** - is a simple function like this:
 
