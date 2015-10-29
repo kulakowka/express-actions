@@ -1,11 +1,11 @@
-import Article from '../../models/article'
+import Item from '../../models/item'
 
 export default (req, res, next) => {
-  Article
+  Item
     .findById(req.params.id)
-    .exec((err, article) => {
+    .exec((err, item) => {
       if (err) return next(err)
-      req.article = article
+      req.item = item
       next()
     })
 }

@@ -1,0 +1,17 @@
+extends ../layout.jade
+
+block title
+  title Items list
+
+block content
+  
+  each item in items
+    article
+      h2
+        a(href="/items/" + item.id)= item.title
+      = item.text
+      .meta
+        a(href="/items/" + item.id+"/edit") edit
+
+  unless items.length
+    h1 No items

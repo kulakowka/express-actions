@@ -1,3 +1,3 @@
 export default (req, res, next) => {
-  res.render('articles/new')
+  res.render('items/edit', req.item)
 }

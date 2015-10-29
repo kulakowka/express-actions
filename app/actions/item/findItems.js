@@ -1,13 +1,13 @@
-import Article from '../../models/article'
+import Item from '../../models/item'
 
 export default (req, res, next) => {
-  Article
+  Item
     .find()
     .limit(10)
     .sort({ _id: -1 })
-    .exec((err, articles) => {
+    .exec((err, items) => {
       if (err) return next(err)
-      req.articles = articles
+      req.items = items
       next()
     })
 }
