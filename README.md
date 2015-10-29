@@ -3,6 +3,8 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kulakowka/express-actions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
+This is my approach to the structure of the node.js applications. No controllers, only actions!
+
 #### Setup project:
 ```
 git clone git@github.com:kulakowka/express-actions.git
