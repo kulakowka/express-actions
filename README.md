@@ -1,5 +1,7 @@
 # Simple application 
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kulakowka/express-actions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 #### Setup project:
 ```
 git clone git@github.com:kulakowka/express-actions.git
