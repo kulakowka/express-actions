@@ -11,7 +11,7 @@ app.use(json())
 app.use(session)
 app.use(stylus)
 app.use(staticFiles)
-app.set('views', resolve(__dirname, 'views'))
+app.set('views', resolve(__dirname, '..', 'views'))
 app.set('view engine', 'jade')
 app.use(routes)
 

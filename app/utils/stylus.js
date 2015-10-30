@@ -11,7 +11,7 @@ function compile (str, path) {
 }
 
 export default stylus.middleware({
-  src: path.resolve(__dirname, '..', 'assets'),
+  src: path.resolve(__dirname, '../../', 'assets'),
   dest: path.resolve(__dirname, '../../', 'public'),
   compile: compile
 })

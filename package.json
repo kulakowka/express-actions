@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "babel app --out-dir build",
+    "start-build": "node build",
     "test": "standard"
   },
   "author": "",
