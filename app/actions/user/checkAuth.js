@@ -1,5 +1,4 @@
 export default (req, res, next) => {
-  req.session.user = 'kulakowka' // hack
-  if (!req.session.user) return next(new Error('Not authorised'))
+  if (!req.user) return res.redirect('/users/sign_in')
   next()
 }

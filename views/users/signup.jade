@@ -1,0 +1,19 @@
+extends ../layout.jade
+
+block title
+  title Sign up
+
+block content
+  h1 Sign up
+
+  while notice = flash.shift()
+    a.alert(class='alert-' + notice.type)
+      p= notice.message
+  
+  form(action="/users" method="post")
+    .field
+      input(name="username" placeholder="Username")
+    .field
+      input(type="password" name="password" placeholder="Password")
+    .field
+      button(type="submit") Submit

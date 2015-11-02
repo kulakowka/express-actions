@@ -12,5 +12,19 @@ html
         a(href="/items") Items
       li
         a(href="/items/new") New item
+        
+    if currentUser
+      p= currentUser.username
+      p= currentUser.password
+      form(action="/users/logout" method="post")
+        button(type="submit") Logout
+    else 
+      ul
+        li
+          a(href="/users/sign_in") Sign in
+        li
+          a(href="/users/sign_up") Sign up
+
+    
 
     block content
