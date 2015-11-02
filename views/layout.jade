@@ -14,16 +14,22 @@ html
       li
         a(href="/items/new") New item
     
-    ul
-      li
-        a(href="/signup") signup
-      li
-        a(href="/login") login
-      li
-        a(href="/logout") logout
-      li
-        a(href="/forgot-password") forgot-password
-      li
-        a(href="/delete-account") delete-account
+    if name
+      h1= name
+      p= email
+      ul
+        li
+          a(href="/logout") logout
+        li
+          a(href="/delete-account") delete-account
+    else 
+      ul
+        li
+          a(href="/signup") signup
+        li
+          a(href="/login") login
+        li
+          a(href="/forgot-password") forgot-password
+
 
     block content

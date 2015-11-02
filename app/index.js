@@ -13,7 +13,7 @@ app.use(stylus)
 app.use(staticFiles)
 app.set('views', resolve(__dirname, '..', 'views'))
 app.set('view engine', 'jade')
-
+app.disable('x-powered-by')
 app.use(lockit.router)
 app.use(routes)
 
