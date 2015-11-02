@@ -4,6 +4,7 @@ html
     block title
       title Default title
     link(rel="stylesheet" href="/css/app.css")      
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
   body
     ul
       li
@@ -12,5 +13,17 @@ html
         a(href="/items") Items
       li
         a(href="/items/new") New item
+    
+    ul
+      li
+        a(href="/signup") signup
+      li
+        a(href="/login") login
+      li
+        a(href="/logout") logout
+      li
+        a(href="/forgot-password") forgot-password
+      li
+        a(href="/delete-account") delete-account
 
     block content
