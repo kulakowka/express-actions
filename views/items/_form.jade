@@ -1,7 +1,7 @@
 form(action=(id ? '/items/' + id : '/items') method='post')
   .field
-    input(name='title' placeholder='Title' value=title)
+    input(name='title' placeholder='Title' value=title maxLength='200' required)
   .field
-    textarea(name='text' placeholder='Text')= text
+    textarea(name='text' placeholder='Text'  maxLength='100000' required)= text
   .field
     button(type='submit') submit

@@ -7,5 +7,11 @@ block content
   article
     h1= title
     = text
+    p 
+      = "createdAt:"
+      = createdAt
+    p
+      = "updatedAt:"
+      = updatedAt
     .meta
       a(href="/items/"+id+"/edit") edit
