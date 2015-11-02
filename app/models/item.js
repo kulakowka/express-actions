@@ -3,7 +3,7 @@ import createdAt from './plugins/createdAt'
 import updatedAt from './plugins/updatedAt'
 
 var itemSchema = mongoose.Schema({
-  title: {type: String, required: true, maxlength: 2},
+  title: {type: String, required: true, maxlength: 200},
   text: {type: String, required: true, maxlength: 100000},
   user: {type: String, required: true}
 })
