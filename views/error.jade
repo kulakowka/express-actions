@@ -6,8 +6,11 @@ block title
 block content
   h1= message
   h2= error.status
-  each err in errors
-    = err.message
+  
+  if errors
+    each err in errors
+      = err.message
+
   pre= error.stack
   
   

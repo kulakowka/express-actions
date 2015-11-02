@@ -2,6 +2,7 @@ import mongoose from '../db'
 import createdAt from './plugins/createdAt'
 import updatedAt from './plugins/updatedAt'
 
+// TODO: https://github.com/leepowellcouk/mongoose-validator#readme
 var itemSchema = mongoose.Schema({
   title: {type: String, required: true, maxlength: 200},
   text: {type: String, required: true, maxlength: 100000},

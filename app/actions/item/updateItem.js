@@ -1,9 +1,9 @@
 export default (req, res, next) => {
-  var item = req.item
+  let {title, text} = req.body
+  let item = req.item
 
-  // TODO: hack for example
-  item.title = req.body.title
-  item.text = req.body.text
+  item.title = title
+  item.text = text
 
   item.save((error, item) => {
     if (error) return next(error)
