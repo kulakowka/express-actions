@@ -1,6 +1,10 @@
 # The project is no longer supported !!!
 
-There are plenty of better examples. I recommend to draw your attention to [Seneca - a microservices toolkit for Node.js](http://senecajs.org/get-started/)
+There are plenty of better examples. 
+
+#### I recommend to draw your attention to [Seneca - a microservices toolkit for Node.js](http://senecajs.org/get-started/)
+
+-----------
 
 ### About express-actions 
 
