@@ -1,4 +1,8 @@
-# About express-actions 
+# The project is no longer supported !!!
+
+There are plenty of better examples. I recommend to draw your attention to [Seneca - a microservices toolkit for Node.js](http://senecajs.org/get-started/)
+
+### About express-actions 
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kulakowka/express-actions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
